@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+
+.icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-cog:before { content: '\2699'; } /* '⚙' */
+.icon-video:before { content: '🎬'; } /* '\1f3ac' */
+.icon-user:before { content: '👤'; } /* '\1f464' */
+.icon-calendar:before { content: '📅'; } /* '\1f4c5' */
+.icon-search:before { content: '🔍'; } /* '\1f50d' */
