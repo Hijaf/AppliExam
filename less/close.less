@@ -4,18 +4,22 @@
 
 
 .close {
-  float: right;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bold;
-  line-height: @baseLineHeight;
-  color: @black;
-  text-shadow: 0 1px 0 rgba(255,255,255,1);
-  .opacity(20);
+  vertical-align: bottom;
+  line-height: 28px;
+  color: #888888;
+  text-shadow: 0 1px 0 #555555);
   &:hover {
-    color: @black;
+    color: @blue;
     text-decoration: none;
     cursor: pointer;
     .opacity(40);
+  }
+  &:active {
+    color: @black;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 

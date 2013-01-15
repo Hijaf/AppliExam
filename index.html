@@ -2,6 +2,7 @@
 <html lang="fr-FR">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<title>RIA'series</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" media="all">
 	<link href="css/fontello.css" rel="stylesheet">
@@ -9,20 +10,51 @@
 <body>
 	<header>
 		<h1 id="nomAp">RIA'series</h1>
-		<div class="navbar navbar-fixed-bottom navbar-inverse">
+		<div class="navbar navbar-inverse">
 		    <div class="navbar-inner">
+                <form class="form-search">
+                    <div class="input-append">
+                    <input type="text" class="search-query">
+                    <button type="submit" class="btn">Search</button>
+                    <a class="close" href="#">&times;</a>
+                    </div>
+                </form>
 			    <ul class="nav">
-				    <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
-				    <li><a href="#"><i class="icon-search"></i> Recherche</a></li>
-				    <li><a href="#"><i class="icon-cog"></i> Options</a></li>
+				    <li id="home" class="active"><a href="index.html"><i class="icon-home"></i> Home</a></li>
+				    <li id="recherche"><a href="listeserie.html"><i class="icon-search"></i> Recherche</a></li>
 			    </ul>
 		    </div>
 	    </div>
 	</header>
     <ul id="icones">
-    	<li> <a class="btn" href="#"><i class="icon-user"></i> Mon profil</a></li>
-    	<li> <a class="btn" href="#"><i class="icon-video"></i> Mes séries</a></li>
-    	<li> <a class="btn" href="#"><i class="icon-calendar"></i> Mon planning</a></li>
+    	<li> <a class="btn" href="#" id="mesSeries"><i class="icon-video"></i> Mes séries</a></li>
+    	<li> <a class="btn" href="#" id="monPlanning"><i class="icon-calendar"></i> Mon planning</a></li>
+    	<li> <a class="btn" href="#" id="liSeries"><i class="icon-search"></i> Recherche</a></li>
     </ul>
+    <section id="listeMesSeries">
+    	<h2> Pas de série pour le moment</h2>
+    </section>
+    <ul id="listeRecherche">
+    	<h2> En attente d'une recherche</h2>
+    </ul>
+    <section id="ficheSerie">
+    	<div>
+    		<a class="close" href="#">&times;</a>
+	    	<h1></h1>
+	    	<img src="" alt="">
+	    	<h2>Synopsis</h2>
+	    	<p></p>
+	    	<a class="btn btn-primary addLocSt" href="#" id="ajoutSerie"> Ajouter la série <i class="icon-plus-circle"></i></a>
+	    </div>
+    </section>
+    <section id="planning">
+        <h2 id="noPlan"> Pas de nouveaux épisodes prévus pour le moment </h2>
+    </section>
+    <div class="alert alert-info">
+        <a class="close" href="#">&times;</a>
+        <p> Votre série a bien été ajoutée! </p>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

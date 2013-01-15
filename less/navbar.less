@@ -21,11 +21,7 @@
 // Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
   min-height: @navbarHeight;
-  padding-left:  20px;
-  padding-right: 20px;
   #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
-  border: 1px solid @navbarBorder;
-  .border-radius(@baseBorderRadius);
   .box-shadow(0 1px 4px rgba(0,0,0,.065));
 
   // Prevent floats from breaking the navbar
@@ -134,10 +130,11 @@
 // -------------------------
 .navbar-search {
   position: relative;
-  float: left;
   .navbarVerticalAlign(30px); // Vertically center in navbar
-  margin-bottom: 0;
+  margin: 5px;
   .search-query {
+    display: inline-block;
+    width: 80%;
     margin-bottom: 0;
     padding: 4px 14px;
     #font > .sans-serif(13px, normal, 1);

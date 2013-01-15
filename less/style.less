@@ -1,15 +1,24 @@
 @import 'bootstrap.less';
 
-@blue: #50B5C5;
-@green: #A7C539;
-
 .borAron{
 	-webkit-border-radius: 13px;
 	border-radius: 13px; 
 }
 
+.fond{
+	color: @blue;
+	background-color: #F0F0F0;
+}
+.h2{
+		font-size: 1.3em;
+		line-height: 1.3em;
+		margin: 0px 0px 3px 0px;
+		padding: 3px 5px 3px 10px;
+		.fond;
+}
+
 body{
-	width: 320px;
+	width: 310px;
 }
 
 #nomAp{
@@ -24,20 +33,30 @@ body{
 	padding: 5px 10px;
 	#gradient > .vertical(@navbarInverseBackgroundHighlight, @navbarInverseBackground);
     border-color: @navbarInverseBorder;
+    z-index: 1000;
+}
+
+.navbar{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px;
+	z-index: 1000;
 }
 
 #icones{
-	width: 320px;
-	margin-top: 40px;
+	//width: 320px;
+	margin: 50px auto 60px auto;
+	list-style: none;
 	li{
-		float: left;
-		display: block;
-		width: 160px;
-		height: 75px;
+		// display: block;
+		// height: 75px;
 		margin-top: 20px;
+		padding: 0px 15px 0px 15px;
 		text-align: center;
 		.btn{
-			width: 120px;
+			display: block;
 			height: 100%;
 			font-size: 1.2em;
 			vertical-align: bottom;
@@ -48,5 +67,174 @@ body{
 			}
 		}
 	}
+}
 
+#listeRecherche{
+	margin: 45px auto 95px auto;
+	h2{
+		.h2;
+	}
+	li{
+		padding: 5px 30px 5px 10px;
+		a:first-child{
+			display: inline-block;
+			max-width: 80%;
+		}
+	}
+	.btnPlus{
+		font-size: 1.5em;
+		float: right;
+	}
+}
+
+#listeMesSeries{
+	margin: 45px auto 95px auto;
+	h2{
+		.h2;
+		a{
+			float: right;
+			font-size: 1.4em;
+			margin-right: 5px;
+		}
+		a:active{
+			color: @black;
+		}
+	}
+	h3{
+		text-indent: 10px;
+		font-size: 1.2em;
+		line-height: 1.2em;
+		color: @blueDark;
+		border-bottom: 1px solid @blueDark;
+		a{
+			display:block;
+			padding: 3px 0px;
+		}
+	}
+	li{
+		padding: 3px 15px 3px 30px;
+		.checkVu{
+			float: right;
+			font-size: 1.4em;
+			text-indent: 0px;
+		}
+		.check{
+			float: right;
+			font-size: 1.4em;
+			text-indent: 0px;
+			color: @green;
+		}
+	}
+	li.fond{
+		color: @black;
+	}
+}
+
+#ficheSerie{
+	margin: 45px auto 95px auto;
+	h1{
+		font-size: 1.5em;
+		line-height: 1.5em;
+		margin: 0px 0px 5px 0px;
+		padding: 3px 10px;
+		color: @blue;
+	}
+	h2{
+		font-size: 1.3em;
+		line-height: 1.3em;
+		margin: 0px 0px 3px 0px;
+		padding: 3px 0px;
+		text-indent: 10px;
+		.fond;
+	}
+	img{
+		display: block;
+		max-width: 300px;
+		margin: 0px auto 15px;
+	}
+	p{
+		margin: 10px 15px 15px 15px;
+	}
+	#ajoutSerie{
+		display: block;
+		margin: 0px 15px 0px 15px;
+	}
+	.close{
+		float: right;
+		display: block;
+		width: 28px;
+		margin-right: 10px;
+		text-align: center;
+		border-radius: 15px;
+		color: @white;
+		background-color: @blue;
+	}
+	.close:active{
+		background-color: @black;
+	}
+
+}
+
+#planning{
+	margin: 45px auto 95px auto;
+	h2{
+		.h2;	
+	}
+	ul{
+		margin-top: 15px;
+		li{
+			padding: 0px 15px 0px 15px;
+			font-weight: bold;
+		}
+		.color{
+			color: @blueDark;
+		}
+	}
+}
+
+.form-search{
+	padding: 5px 20px 10px 10px;
+	margin: 0px;
+	width: 270px;
+	.input-append{
+		display: block;
+		width: 100%;
+		.search-query{
+			display: inline-block;
+    		width: 53%;
+		}
+		.close{
+			margin: 0px 0px 0px 5px;
+			line-height: 30px;
+		}
+	}
+}
+
+.alert{
+	display: block;
+	margin: 15px;
+	padding: 5px 5px 0px 5px;
+	position: fixed;
+	top: 100px;
+	left: 0px;
+	right: 0px;
+	z-index: 1200;
+	p{
+		font-size: 1.3em;
+		text-align: center;
+		line-height: 30px;
+		padding: 15px;
+	}
+	.close{
+		float: right;
+		display: block;
+		width: 28px;
+		text-align: center;
+		border-radius: 15px;
+		color: @white;
+		background-color: @blue;
+	}
+	.close:active{
+		background-color: @black;
+	}
 }

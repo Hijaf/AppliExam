@@ -106,8 +106,7 @@ body {
   color: black;
   background: white;
 }
-ol,
-ul {
+ol {
   list-style: none;
 }
 /* tables still need 'cellspacing="0"' in the markup */
@@ -357,7 +356,7 @@ a:hover {
 }
 .row-fluid .span3 {
   width: 23.404255319148934%;
-  *width: 23.351063829787232%;
+  *width: 23.351063829787233%;
 }
 .row-fluid .span2 {
   width: 14.893617021276595%;
@@ -368,35 +367,35 @@ a:hover {
   *width: 6.329787234042553%;
 }
 .row-fluid .offset12 {
-  margin-left: 104.25531914893616%;
+  margin-left: 104.25531914893617%;
   *margin-left: 104.14893617021275%;
 }
 .row-fluid .offset12:first-child {
   margin-left: 102.12765957446808%;
-  *margin-left: 102.02127659574466%;
+  *margin-left: 102.02127659574467%;
 }
 .row-fluid .offset11 {
   margin-left: 95.74468085106382%;
   *margin-left: 95.6382978723404%;
 }
 .row-fluid .offset11:first-child {
-  margin-left: 93.61702127659573%;
+  margin-left: 93.61702127659574%;
   *margin-left: 93.51063829787232%;
 }
 .row-fluid .offset10 {
-  margin-left: 87.23404255319148%;
+  margin-left: 87.23404255319149%;
   *margin-left: 87.12765957446807%;
 }
 .row-fluid .offset10:first-child {
   margin-left: 85.1063829787234%;
-  *margin-left: 84.99999999999998%;
+  *margin-left: 84.99999999999999%;
 }
 .row-fluid .offset9 {
   margin-left: 78.72340425531914%;
   *margin-left: 78.61702127659572%;
 }
 .row-fluid .offset9:first-child {
-  margin-left: 76.59574468085105%;
+  margin-left: 76.59574468085106%;
   *margin-left: 76.48936170212764%;
 }
 .row-fluid .offset8 {
@@ -420,7 +419,7 @@ a:hover {
   *margin-left: 53.085106382978715%;
 }
 .row-fluid .offset6:first-child {
-  margin-left: 51.063829787234034%;
+  margin-left: 51.063829787234035%;
   *margin-left: 50.95744680851063%;
 }
 .row-fluid .offset5 {
@@ -461,7 +460,7 @@ a:hover {
 }
 .row-fluid .offset1:first-child {
   margin-left: 8.51063829787234%;
-  *margin-left: 8.404255319148937%;
+  *margin-left: 8.404255319148938%;
 }
 [class*="span"].hide,
 .row-fluid [class*="span"].hide {
@@ -1926,7 +1925,7 @@ table th[class*="span"],
 .open {
   *z-index: 1000;
 }
-.open  > .dropdown-menu {
+.open > .dropdown-menu {
   display: block;
 }
 .pull-right > .dropdown-menu {
@@ -2057,21 +2056,24 @@ table th[class*="span"],
   height: auto;
 }
 .close {
-  float: right;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bold;
-  line-height: 20px;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
+  vertical-align: bottom;
+  line-height: 28px;
+  color: #888888;
+  text-shadow: 0 1px 0 #555555);
 }
 .close:hover {
-  color: #000000;
+  color: #049cdb;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.4;
   filter: alpha(opacity=40);
+}
+.close:active {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
 }
 button.close {
   padding: 0;
@@ -2698,12 +2700,6 @@ input[type="submit"].btn.btn-mini {
 .alert h4 {
   margin: 0;
 }
-.alert .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  line-height: 20px;
-}
 .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -3065,8 +3061,6 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-inner {
   min-height: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: #fafafa;
   background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
@@ -3075,10 +3069,6 @@ input[type="submit"].btn.btn-mini {
   background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-  border: 1px solid #d4d4d4;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
@@ -3178,11 +3168,12 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-search {
   position: relative;
-  float: left;
   margin-top: 5px;
-  margin-bottom: 0;
+  margin: 5px;
 }
 .navbar-search .search-query {
+  display: inline-block;
+  width: 80%;
   margin-bottom: 0;
   padding: 4px 14px;
   font-family: Helvetica, Arial, sans-serif;

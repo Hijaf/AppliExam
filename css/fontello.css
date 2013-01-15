@@ -31,7 +31,13 @@
 }
 
 .icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-right-dir:before { content: '\25b8'; } /* '▸' */
+.icon-down-dir:before { content: '\25be'; } /* '▾' */
 .icon-cog:before { content: '\2699'; } /* '⚙' */
+.icon-plus-circle:before { content: '\2795'; } /* '➕' */
+.icon-eye:before { content: '\e70a'; } /* '' */
+.icon-eye-off:before { content: '\e70b'; } /* '' */
+.icon-trash:before { content: '\e729'; } /* '' */
 .icon-video:before { content: '🎬'; } /* '\1f3ac' */
 .icon-user:before { content: '👤'; } /* '\1f464' */
 .icon-calendar:before { content: '📅'; } /* '\1f4c5' */
