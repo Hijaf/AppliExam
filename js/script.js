@@ -145,14 +145,15 @@
 		var sUrlTarget = $(this).attr('href'),
 			sKey = "ria_"+sUrlTarget,
 			aSerie;
-
-		$(this).parents('#s'+sUrlTarget).slideUp(function(){
-			$(this).parents('#s'+sUrlTarget).remove();
-		});
-		window.localStorage.removeItem(sKey);
-		aSerie = getLocalStorage();
-		if(aSerie==""){
-			$mesSeriesTitre.appendTo('#listeMesSeries');
+		if(confirm('Etes vous sûr de vouloir supprimer cette série?')){
+			$(this).parents('#s'+sUrlTarget).slideUp(function(){
+				$(this).parents('#s'+sUrlTarget).remove();
+			});
+			window.localStorage.removeItem(sKey);
+			aSerie = getLocalStorage();
+			if(aSerie==""){
+				$mesSeriesTitre.appendTo('#listeMesSeries');
+			}
 		}
 	};
 
@@ -268,11 +269,13 @@
 		$('#planning div').remove();
 		aSerie = getLocalStorage();
 		oAjaxRequest.callAjax("/planning/general.json",function(oPlanning){
-			var sDate;
+			var sDate,
+				sDateActu;
 			for(var i=0; i<aSerie.length;i++){
 				for(var j=0; j<oPlanning.root.planning.length; j++){
 					if(oPlanning.root.planning[j].url===aSerie[i].url){
 						sDate = new Date(oPlanning.root.planning[j].date*1000);
+						sDateActu = new Date();
 						if(sSelecDiv!==("s"+oPlanning.root.planning[j].url)){
 							$('<div id="s'+oPlanning.root.planning[j].url+'"></div>').appendTo('#planning');
 							$('<h2>'+oPlanning.root.planning[j].show+'</h2>').appendTo('#planning #s'+oPlanning.root.planning[j].url);
@@ -281,6 +284,9 @@
 						}
 						else{
 							$('<ul><li class="color">'+sDate.toLocaleDateString()+'</li><li class="e'+oPlanning.root.planning[j].number+'">'+oPlanning.root.planning[j].number+'</li><li>'+oPlanning.root.planning[j].title+'</li></ul>').appendTo('#planning #s'+oPlanning.root.planning[j].url);
+						}
+						if(sDateActu>sDate){
+							$('#planning #s'+oPlanning.root.planning[j].url+' .color').attr('class','colorRed');
 						}
 						$('#noPlan').remove();
 					}
